@@ -1,0 +1,12 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      [
+        "build",
+        "-f", "Dockerfile-before-https-first",
+        "-t", "us-central1-docker.pkg.dev/gcp-class-17/yash-bank-repo/bank-web-yash:v1",
+        "."
+      ]
+
+images:
+  - "us-central1-docker.pkg.dev/gcp-class-17/yash-bank-repo/bank-web-yash:v1"
